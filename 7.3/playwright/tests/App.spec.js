@@ -6,7 +6,7 @@ test("test", async ({ page }) => {
 
   // Click a
   await page.click("a");
-  await expect(page).toHaveURL("https://netology.ru/");
+  await expect(page).toHaveURL("https://netology.ru/free/management#/");
 
   // Click text=Учиться бесплатно
   await page.click("text=Учиться бесплатно");
@@ -15,8 +15,8 @@ test("test", async ({ page }) => {
   page.click("text=Бизнес и управление");
 
   // Click text=Как перенести своё дело в онлайн
-  await page.click("text=Как перенести своё дело в онлайн");
+  await page.click("text=Бухгалтер: первые шаги в профессии");
   await expect(page).toHaveURL(
-    "https://netology.ru/programs/kak-perenesti-svoyo-delo-v-onlajn-bp"
+    "https://netology.ru/programs/accountant-free"
   );
 });
