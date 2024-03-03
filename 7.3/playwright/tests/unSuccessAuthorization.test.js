@@ -28,4 +28,5 @@ test("test  unsuccess authorization", async ({ page }) => {
   await page.click('[data-testid="login-error-hint"]');
   await page.locator("data-testid=login-error-hint").isVisible;
   await expect(page.locator("[data-testid=login-error-hint]")).toContainText("Вы ввели неправильно логин или пароль");
+  await page.screenshot({ path: "./Screenshots/unSuccessAuthorization.png", fullPage: true })
 });

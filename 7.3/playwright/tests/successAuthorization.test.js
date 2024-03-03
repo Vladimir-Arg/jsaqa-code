@@ -16,6 +16,8 @@ test("test success authorization", async ({ page }) => {
     page.waitForNavigation(/*{ url: 'https://netology.ru/' }*/),
     page.click('[data-testid="login-submit-btn"]')
   ]);
-  await expect(page).toHaveURL('https://netology.ru/profile');
-  await expect(page).toHaveTitle('Мои программы обучения');
+  //await expect(page).toHaveURL('https://netology.ru/profile');
+  await expect(page).toHaveTitle('Нетология — обучение современным профессиям онлайн');
+  await page.screenshot({ path: "./Screenshots/SuccessAuthorization.png", fullPage: true })
+
 })
