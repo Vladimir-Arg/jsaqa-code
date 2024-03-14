@@ -5,9 +5,9 @@ beforeEach(async () => {
   // await page.goto("https://github.com/team"); // не подходит для собственных тестов, убираем из этого блока
 });
 
-// afterEach(() => {
-//   page.close();
-// });
+afterEach(() => {
+  page.close();
+});
 
 describe("Github page tests", () => {
   beforeEach(async () => {
@@ -38,7 +38,7 @@ describe("Github page tests", () => {
 
 describe("My github page tests",() => {
   beforeEach(async () => {
-    page = await browser.newPage();
+    // page = await browser.newPage(); // Открытие новой страницы есть в глобальном хуке
     await page.goto("https://github.com/"); // 
   });
   test("First", async () => {
