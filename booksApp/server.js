@@ -98,6 +98,7 @@ router.post('/api/user/login', async (ctx, next) => {
   const users = [
     { id: 1, mail: 'bropet@mail.ru', pass: '123' },
     { id: 2, mail: 'test@test.com', pass: 'test' },
+    { id: 3, mail: 'example@test.com', pass: 'example' },
   ];
   let response = users.filter(
     (elem) => !!(elem.mail === message.mail && elem.pass === message.pass),

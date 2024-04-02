@@ -23,3 +23,20 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+// Команда логина. Нажать кнопку "Log in"; → в поле "e-mail" ввести логин; → в поле "password" ввести пароль; → нажать кнопку "Submit".
+Cypress.Commands.add("login", (login, password) => {
+        cy.contains("Log in").click();
+        if (login)
+        cy.get("#mail").type(login);
+        if (password)
+        cy.get("#pass").type(password);
+        cy.contains("Submit").click();
+      });
+
+// Команда добавления книги
+Cypress.Commands.add("addBook", (login, password) => {
+  cy.contains("Submit").click();
+});
+
+// Команда удаления книги
